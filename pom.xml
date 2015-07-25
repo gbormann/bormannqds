@@ -12,7 +12,9 @@
     <description>Some common functionality for small tool-oriented Java Swing apps</description>
 
     <modules>
-        <module>auxdata-access</module>
+        <module>utils</module>
+        <module>bricks</module>
+        <module>data-access</module>
     </modules>
 
 <!--
