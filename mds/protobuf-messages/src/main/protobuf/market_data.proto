@@ -1,0 +1,29 @@
+
+package com.bormannqds.mds.lib.protobufmessages;
+
+// MarketData Trade oneof submessage for trade prints
+message Trade {
+    required double price = 1;
+    required int32 size = 2;
+}
+
+// MarketData TobQuote oneof submessage for top-of-book quotes
+message TobQuote {
+    required double bid = 1;
+    required double ask = 2;
+    required int32 bid_size = 3;
+    required int32 ask_size = 4;
+}
+
+// MarketData is a oneof, selecting between Trade and BboQuote.
+// We can later add LnQuote with n=5 PriceLevels plus (n-5) > additional optional PriceLevels
+message MarketDataMessage {
+    required int64 timestamp = 1;
+    required string symbol = 2; // for fungibles: should contain RIC-like ECN indicator to obviate separate source field
+    oneof payload {
+        Trade trade = 3;
+        TobQuote tob_quote = 4;
+    }
+    optional int64 gateway_timestamp = 5;
+    optional int32 seq_no = 6;
+}
