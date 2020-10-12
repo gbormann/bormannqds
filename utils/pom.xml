@@ -13,7 +13,7 @@
     <groupId>com.bormannqds.lib</groupId>
     <artifactId>utils</artifactId>
     <version>1-SNAPSHOT</version>
-    <url>email://bormann.qd.services.ltd@gmail.com</url>
+    <url>email://guy.bormann@bormannqdservices.be</url>
 
     <licenses>
         <license>
@@ -108,7 +108,7 @@
         <developer>
             <name>Guy Bormann</name>
             <organization>Bormann QD Services Ltd</organization>
-            <email>bormann.qd.services.ltd@gmail.com</email>
+            <email>guy.bormann@bormannqdservices.be</email>
         </developer>
     </developers>
     <properties>
